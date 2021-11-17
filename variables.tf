@@ -19,6 +19,7 @@
 variable "project_id" {
   type        = string
   description = "The project ID to host the cluster in (required)"
+  default     = "mamz-project"
 }
 
 variable "name" {
@@ -41,7 +42,7 @@ variable "regional" {
 variable "region" {
   type        = string
   description = "The region to host the cluster in (optional if zonal cluster / required if regional)"
-  default     = null
+  default     = "us-central1"
 }
 
 variable "zones" {
@@ -58,7 +59,7 @@ variable "network" {
 variable "network_project_id" {
   type        = string
   description = "The project ID of the shared VPC's host (for shared vpc support)"
-  default     = ""
+  default     = "mamz-project"
 }
 
 variable "subnetwork" {
